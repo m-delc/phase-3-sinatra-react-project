@@ -6,4 +6,15 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+  get "/resos" do
+    reso = Reservation.all.order(:name)
+    reso.to_json
+  end
+
+  post "/resos" do
+    reso = Reservation.create(name: params[:name], phone_number: params[:phone_number], time: params[:time])
+    reso.to_json
+  end
+
+
 end
