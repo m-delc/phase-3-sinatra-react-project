@@ -1,6 +1,6 @@
 bundle install
 
-rake server# phase_tree
+rake server
 
 
 json format:
