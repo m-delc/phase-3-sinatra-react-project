@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 2022_01_25_191741) do
     t.string "name"
     t.string "phone_number"
     t.string "time"
+    t.integer "restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "review"
-    t.integer "reservation_id"
   end
 
 end

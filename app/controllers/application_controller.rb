@@ -1,3 +1,5 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -13,6 +15,7 @@ class ApplicationController < Sinatra::Base
 
   post "/resos" do
     reso = Reservation.create(name: params[:name], phone_number: params[:phone_number], time: params[:time])
+    # binding.pry
     reso.to_json
   end
 
