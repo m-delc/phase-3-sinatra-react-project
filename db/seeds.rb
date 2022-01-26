@@ -8,8 +8,7 @@ puts "🌱 Seeding spices..."
         description: Faker::Restaurant.description,
         review: Faker::Restaurant.review
     )
-end 
-
+end
 
 
 puts "✅ Done seeding!"
