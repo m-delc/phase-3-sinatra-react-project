@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_191741) do
     t.string "phone_number"
     t.string "time"
     t.integer "restaurant_id"
+    t.integer "party"
   end
 
   create_table "restaurants", force: :cascade do |t|
