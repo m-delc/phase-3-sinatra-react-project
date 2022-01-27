@@ -9,13 +9,13 @@ class ReservationsController < ApplicationController
 
     post "/reservations" do
         # binding.pry
-        reso = Reservation.create(name: params[:name], phone_number: params[:phone_number], time: params[:time], restaurant_id: params[:restaurant_id], party: params[:party])
+        reso = Reservation.create(name: params[:name], phone_number: params[:phone_number], time: params[:time], restaurant_id: params[:restaurant_id], party: params[:party], day: params[:day])
         reso.to_json({include: :restaurant})
     end
 
     patch '/reservations/:id' do
         x = Reservation.find(params[:id])
-        x.update(name: params[:name], phone_number: params[:phone_number], time: params[:time], restaurant_id: params[:restaurant_id], party: params[:party]).to_json({include: :restaurant})
+        x.update(name: params[:name], phone_number: params[:phone_number], time: params[:time], restaurant_id: params[:restaurant_id], party: params[:party], day: params[:day]).to_json({include: :restaurant})
 
     end
 
