@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_191741) do
     t.string "name"
     t.string "description"
     t.string "review"
+    t.string "img"
   end
 
 end

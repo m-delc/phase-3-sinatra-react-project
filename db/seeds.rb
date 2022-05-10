@@ -6,7 +6,8 @@ puts "🌱 Seeding spices..."
     Restaurant.create(
         name: Faker::Restaurant.name,
         description: Faker::Restaurant.description,
-        review: Faker::Restaurant.review
+        review: Faker::Restaurant.review,
+        img: Faker::LoremFlickr.image(size: "200x240", search_terms: ['restaurants'])
     )
 end
 
